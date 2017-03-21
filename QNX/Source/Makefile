@@ -21,9 +21,10 @@ clean:
 	rm -f *.o *.err advent advent0 advtext.h
 
 install:
-	cp -f advent /usr/local/bin
-	chmod 0644 $(DATA)
-	cp -f $(DATA) /usr/local/lib/games
+	mkdir -p $(DESTDIR)/usr/local/bin
+	mkdir -p $(DESTDIR)/usr/local/lib/games
+	install -m 755 advent $(DESTDIR)/usr/local/bin
+	install -m 644 $(DATA) $(DESTDIR)/usr/local/lib/games
 
 advtext.h: advent0 $(DATA)
 	./advent0

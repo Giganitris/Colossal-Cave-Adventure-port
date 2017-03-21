@@ -5,6 +5,7 @@
 \*		All other modules use "advdec.h"		*/
 
 
+#include	<unistd.h>	// change CWD to /usr/local/lib/games
 #include	<stdio.h>	/* drv = 1.1st file 2.def 3.A	*/
 #include	"advent.h"	/* #define preprocessor equates	*/
 #include	"advword.h"	/* definition of "word" array	*/
@@ -186,6 +187,7 @@ initplay()
 
 opentxt()
 {
+	chdir("/usr/local/lib/games");
 	fd1 = fopen(ADV1, "r");
 	if (!fd1) {
 		printf("Sorry, I can't open advent1.txt...\n");
