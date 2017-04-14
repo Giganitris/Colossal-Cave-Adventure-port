@@ -187,7 +187,7 @@ initplay()
 
 opentxt()
 {
-	chdir("/usr/local/lib/games");
+	chdir("/usr/share/adventure-qnx");
 	fd1 = fopen(ADV1, "r");
 	if (!fd1) {
 		printf("Sorry, I can't open advent1.txt...\n");
