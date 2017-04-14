@@ -12,7 +12,7 @@ CC= cc
 all: advent
 
 advent: $(OBJ)
-	cc -o advent $(CFLAGS) $(LDFLAGS) $(OBJ)
+	cc -o adventure-qnx $(CFLAGS) $(LDFLAGS) $(OBJ)
 
 advent0: advent0.o
 	cc -o advent0 $(CFLAGS) $(LDFLAGS) advent0.o
@@ -21,10 +21,10 @@ clean:
 	rm -f *.o *.err advent advent0 advtext.h
 
 install:
-	mkdir -p $(DESTDIR)/usr/local/bin
-	mkdir -p $(DESTDIR)/usr/local/lib/games
-	install -m 755 advent $(DESTDIR)/usr/local/bin
-	install -m 644 $(DATA) $(DESTDIR)/usr/local/lib/games
+	mkdir -p $(DESTDIR)/usr/bin
+	mkdir -p $(DESTDIR)/usr/share/adventure-qnx
+	install -m 755 adventure-qnx $(DESTDIR)/usr/bin
+	install -m 644 $(DATA) $(DESTDIR)/usr/share/adventure-qnx
 
 advtext.h: advent0 $(DATA)
 	./advent0

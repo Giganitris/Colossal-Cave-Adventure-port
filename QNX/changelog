@@ -1,9 +1,0 @@
-03/20/2017 QNX v0.0.0.1 <giganitris(at)gmail(dot)com>
-Makefile, install
-	Edited makefile to support modern package managers.
-advent.c, opentxt
-	added chdir to /usr/local/lib/games. Included unistd.h
-
-??/??/???? QNX v0.0.0.0 <giganitris(at)gmail(dot)com>
-Released. Source code edited for compatibility.
-
